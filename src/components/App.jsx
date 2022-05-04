@@ -1,14 +1,12 @@
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
 import NavBar from "./NavigationBar/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Hero from "./HomePage/Hero";
 import { ParallaxProvider } from "react-scroll-parallax";
 import CreateNewProduct from "./CreateProduct/CreateNewProduct";
-import { CircularProgress } from "@mui/material";
-
-const ProductView = React.lazy(() => import("./ProductPage/ProductView"));
-const CardStack = React.lazy(() => import("./ProductPage/CardStack"));
-const SignIn = React.lazy(() => import("./CreateProduct/SignIn"));
+import ProductView from "./ProductPage/ProductView";
+import CardStack from "./ProductPage/CardStack";
+import SignIn from "./CreateProduct/SignIn";
 
 function App() {
   const [isSigned, setIsSigned] = useState(false);
@@ -18,13 +16,6 @@ function App() {
   console.log(isSigned);
   return (
     <Router>
-      <Suspense
-        fallback={
-          <div style={{ positon: "absolute", top: "50%", left: "50%" }}>
-            <CircularProgress />
-          </div>
-        }
-      >
         <div>
           <NavBar />
           <Routes>
@@ -76,7 +67,6 @@ function App() {
             <Route exact path="/:product/:id" element={<ProductView />} />
           </Routes>
         </div>
-      </Suspense>
     </Router>
   );
 }
