@@ -23,7 +23,7 @@ const CardStack = (props) => {
     });
 
     return returnArr;
-};
+}
   const [imagesPerPage] = useState(12);
   const [currentPage, setCurrentPage] = useState(1);
   const indexOfLastImage = currentPage * imagesPerPage;
@@ -50,7 +50,7 @@ const CardStack = (props) => {
 });
   }, []);
   useEffect(() => {
-    setImages(products.[items])
+    setImages(products.items)
   }, [products, items])
   useEffect(() => {
     setCurrentImages(images.slice(indexOfFirstImage, indexOfLastImage));
@@ -66,17 +66,17 @@ const CardStack = (props) => {
 
   function handleFilterClick(event) {
     setCurrentImages(
-      products.[items]
+      products.items
         .filter((value) => value.type === event.target.value)
         .slice(indexOfFirstImage, indexOfLastImage)
     );
     setImages(
-      products.[items].filter((value) => value.type === event.target.value)
+      products.items.filter((value) => value.type === event.target.value)
     );
   }
   function handleAllFilter() {
-    setCurrentImages(products.[items].slice(indexOfFirstImage, indexOfLastImage));
-    setImages(products.[items]);
+    setCurrentImages(products.items.slice(indexOfFirstImage, indexOfLastImage));
+    setImages(products.items);
   }
   return (
     <div style={{ marginTop: "6%" }}>
