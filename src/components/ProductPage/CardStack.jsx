@@ -96,7 +96,7 @@ const CardStack = (props) => {
       <Grid style={{ textAlign: "center" }} container>
         {currentImages.map((card, index) => {
           return (
-            <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={index}>
+            <Grid item md={12} lg={6} xl={2} key={index}>
               <Card id={card.id} pre={props.for} name={card.name} src={card.images[0]} key={index} />
             </Grid>
           );

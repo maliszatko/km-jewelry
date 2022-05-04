@@ -40,7 +40,7 @@ export const TitleProduct = styled.h1`
 export const CardContainer = styled.div`
   text-align: center;
   align-items: center;
-  width: 300px;
+  width: 50%;
   height: 400px;
   margin: 10% auto 0 auto;
   display: block;
@@ -107,7 +107,6 @@ export const PageButton = styled.button`
   border: none;
   background-color: inherit;
   text-size: 1.25rem;
-  background-color: ;
   color: black;
   padding: 5px 15px;
   border-radius: 5px;
@@ -144,6 +143,5 @@ export const LargeImageButton = styled.button`
   border: none;
   background-color: inherit;
   text-size: 1.25rem;
-  background-color: ;
   cursor: pointer;
 `;
