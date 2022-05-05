@@ -16,10 +16,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    //font-size: 14px;
-    @media only screen and (max-width: 1200px) {
-      font-size: 20px;
-    }
+    font-size: 14px;
   }
 `
 
