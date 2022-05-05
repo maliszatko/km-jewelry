@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavMenu, NavOpenMenu, StyledLink } from "./StyledComponents";
+import { NavMenu, NavOpenMenu, StyledLink, ClosedList, OpenList } from "./StyledComponents";
 
 const links = [
   { name: "Kolczyki", route: "/kolczyki" },
@@ -30,7 +30,7 @@ function Links(props) {
   if (props.styl === "open") {
     return (
       <NavOpenMenu>
-        <ul className="open">
+        <OpenList>
           {links.map((link, index) => {
             if (link.name === active) {
               isSelected = true;
@@ -48,13 +48,13 @@ function Links(props) {
               />
             );
           })}
-        </ul>
+        </OpenList>
       </NavOpenMenu>
     );
   } else {
     return (
       <NavMenu>
-        <ul className="closed">
+        <ClosedList>
           {links.map((link, index) => {
             if (link.name === active) {
               isSelected = true;
@@ -72,7 +72,7 @@ function Links(props) {
               />
             );
           })}
-        </ul>
+        </ClosedList>
       </NavMenu>
     );
   }
