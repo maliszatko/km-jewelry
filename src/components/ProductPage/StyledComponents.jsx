@@ -26,15 +26,26 @@ export const SmallImage = styled.img`
 `;
 
 export const Title = styled.h1`
-  font-size: 2.5rem;
+  @media screen and (max-width: 992px) {
+    font-size: 3.5rem;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 2.0rem;
+  }
   font-family: "Unna", serif;
   text-align: center;
 `;
 
 export const TitleProduct = styled.h1`
-  font-size: 2.5rem;
+  @media screen and (max-width: 992px) {
+    font-size: 3.75rem;
+    text-align: center;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 2.5rem;
+    text-align: left;
+  }
   font-family: "Unna", serif;
-  text-align: left;
 `;
 
 export const CardContainer = styled.div`
@@ -45,31 +56,13 @@ export const CardContainer = styled.div`
   margin: 10% auto 0 auto;
   display: block;
   place-items: center;
-  border: 2px solid;
   padding: 1rem;
   position: relative;
   background: #fff;
-
-  /*The background extends to the outside edge of the padding. No background is drawn beneath the border.*/
   background-clip: padding-box;
-
   border: solid 8px transparent;
   border-radius: 0.8rem;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -2px;
-    border-radius: inherit; /* inherit container box's radius */
-    background: linear-gradient(to left, #a67b00, #d3ae36);
-  }
   &:hover {
-    /* opacity: 0.8; */
     transition: transform 0.2s; /* Animation */
     position: relative;
     z-index: 999;
@@ -79,10 +72,15 @@ export const CardContainer = styled.div`
 
 export const TextTitle = styled.h2`
   font-size: 0.9rem;
-  text-transform: uppercase;
-  width: 200px;
-  margin: 3% auto;
-  overflow-wrap: break-word;
+  width: 50vw;
+  margin: 1% auto;
+  overflow-wrap: normal;
+  @media screen and (max-width: 992px) {
+    font-size: 2.25rem;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const PagesButtons = styled.div`
@@ -104,17 +102,21 @@ export const ImageButton = styled.button`
 `;
 
 export const PageButton = styled.button`
+  @media screen and (max-width: 992px) {
+    font-size: 2.0rem;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 1.5rem;
+  }
   border: none;
   background-color: inherit;
-  text-size: 1.25rem;
   color: black;
-  padding: 5px 15px;
+  padding: 2% 3%;
   border-radius: 5px;
   outline: 0;
-  text-transform: uppercase;
-  margin: 10px 0px;
+  margin: 10px 0;
   cursor: pointer;
-  box-shadow: 0px 2px 2px grey;
+  box-shadow: 0 2px 2px grey;
   transition: ease background-color 250ms;
   &:hover {
     background-color: black;
@@ -123,7 +125,7 @@ export const PageButton = styled.button`
   &:disabled {
     cursor: default;
     opacity: 0.3;
-    box-shadow: 0px 1px 1px lightgray;
+    box-shadow: 0 1px 1px lightgray;
   }
 `;
 
@@ -142,6 +144,6 @@ export const StyledLink = styled(Link)`
 export const LargeImageButton = styled.button`
   border: none;
   background-color: inherit;
-  text-size: 1.25rem;
+  font-size: 1.25rem;
   cursor: pointer;
 `;

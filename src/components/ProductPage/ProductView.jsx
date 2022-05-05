@@ -68,7 +68,7 @@ function ProductView() {
   return (
     <div>
       <Grid style={{ textAlign: "center", marginTop: "5%" }} container>
-        <Grid item sm={12} md={6} style={{ display: "block" }}>
+        <Grid item md={12} lg={6} style={{ display: "block" }}>
           <LargeImageButton onClick={clickInZoomer}>
             <Image src={displayedImage} />
           </LargeImageButton>
@@ -95,7 +95,7 @@ function ProductView() {
             }
           })}
         </Grid>
-        <Grid item sm={12} md={6}>
+        <Grid item md={12} lg={6}>
           <TitleProduct>{item[0].name}</TitleProduct>
         </Grid>
       </Grid>
@@ -103,7 +103,7 @@ function ProductView() {
         <FullPageView
           onClick={clickInZoomer}
           src={displayedImage}
-        ></FullPageView>
+        />
       ) : null}
     </div>
   );

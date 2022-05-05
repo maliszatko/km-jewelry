@@ -76,7 +76,7 @@ const CardStack = (props) => {
     );
   }
   function handleAllFilter() {
-    setCurrentImages(products.items.slice(indexOfFirstImage, indexOfLastImage));
+    setCurrentImages(products[items].slice(indexOfFirstImage, indexOfLastImage));
     setImages(products[items]);
   }
   return (

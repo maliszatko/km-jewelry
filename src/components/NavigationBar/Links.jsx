@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavMenu, NavOpenMenu, StyledLink, ClosedList, OpenList } from "./StyledComponents";
+import { NavMenu, NavOpenMenu, StyledLink, ClosedList, OpenList, OpenListItem, ClosedListItem } from "./StyledComponents";
 
 const links = [
   { name: "Kolczyki", route: "/kolczyki" },
@@ -11,12 +11,16 @@ function Anchor(props) {
   if (props.selected) {
     textDecoration = { textDecoration: "underline" };
   }
-  return (
-    <li className={props.styl}>
+  return (props.styl === "open" ?
+    <OpenListItem>
       <StyledLink to={props.route} onClick={props.func} style={textDecoration}>
         {props.text}
       </StyledLink>
-    </li>
+    </OpenListItem> : <ClosedListItem>
+        <StyledLink to={props.route} onClick={props.func} style={textDecoration}>
+            {props.text}
+        </StyledLink>
+        </ClosedListItem>
   );
 }
 
