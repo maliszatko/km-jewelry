@@ -6,7 +6,7 @@ import { HeaderMenu } from "./StyledComponents";
 function Header() {
   return (
     <HeaderMenu>
-      <HeaderButton text="KM Jewelry" url="https://ze3c3u.csb.app/" />
+      <HeaderButton/>
       <Links styl="closed" />
     </HeaderMenu>
   );

@@ -7,6 +7,21 @@ import CreateNewProduct from "./CreateProduct/CreateNewProduct";
 import ProductView from "./ProductPage/ProductView";
 import CardStack from "./ProductPage/CardStack";
 import SignIn from "./CreateProduct/SignIn";
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    //font-size: 14px;
+    @media only screen and (max-width: 1200px) {
+      font-size: 20px;
+    }
+  }
+`
 
 function App() {
   const [isSigned, setIsSigned] = useState(false);
@@ -17,6 +32,7 @@ function App() {
   return (
     <Router>
         <div>
+          <GlobalStyle />
           <NavBar />
           <Routes>
             <Route

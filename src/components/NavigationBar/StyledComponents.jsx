@@ -1,7 +1,28 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+export const ClosedList = styled.ul`
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+`
+export const OpenList = styled.ul`
+    position: relative;
+    display: block;
+    justify-content: center;
+    text-align: center;
+`
+export const HeaderMobile = styled.header`
+  //background-color: #ffeeee;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+`
+
 export const StyledLink = styled(Link)`
+  font-size: 1.5rem;
   &:hover {
     color: #dddddd;
   }
@@ -16,10 +37,13 @@ export const StyledLink = styled(Link)`
 export const Button = styled.button`
   border: none;
   background-color: inherit;
-  text-size: 1.25rem;
+  font-size: 1.25rem;
 `;
 
-export const Brand = styled.a`
+export const Brand = styled(Link)`
+  @media only screen and (max-width: 1200px) {
+    font-size: 32px;
+  }
   &:hover,
   &:visited,
   &:link,
@@ -30,12 +54,11 @@ export const Brand = styled.a`
 `;
 
 export const HeaderBrand = styled(Button)`
-  white-space: nowrap;
-  overflow: hidden;
+  
 `;
 
 export const HeaderMenu = styled.header`
-  background-color: #ffeeee;
+  //background-color: #ffeeee;
   padding: 32px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   display: flex;
@@ -49,11 +72,10 @@ export const NavMenu = styled.div`
   width: 100vw;
   white-space: nowrap;
   position: relative;
-  top: 0px;
+  top: 0;
   left: 10%;
   justify-content: center;
   margin: 0 10%;
-}
 `;
 export const NavOpenMenu = styled.div`
   display: inline-block;
@@ -63,6 +85,9 @@ export const NavOpenMenu = styled.div`
   justify-content: center;
   background-color: white;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  
-}
+`;
+export const HeaderImg = styled.img.attrs({
+    src: "https://firebasestorage.googleapis.com/v0/b/km-jewelry.appspot.com/o/images%2Flogo.png?alt=media&token=ac871c0d-b131-4327-aa5d-31afdd6255a9"
+})`
+height: 100px ;
 `;
