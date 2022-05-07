@@ -60,21 +60,21 @@ export const CardContainer = styled.div`
   position: relative;
   background: #fff;
   background-clip: padding-box;
-  border: solid 8px transparent;
+  border: solid 2px transparent;
   border-radius: 0.8rem;
-  &:hover {
+  &:hover, &:Active {
     transition: transform 0.2s; /* Animation */
     position: relative;
     z-index: 999;
-    transform: scale(1.5);
+    border: 2px solid #d0d0d0;
   }
 `;
 
 export const TextTitle = styled.h2`
   font-size: 0.9rem;
-  width: 50vw;
   margin: 1% auto;
   overflow-wrap: normal;
+  text-align: center;
   @media screen and (max-width: 992px) {
     font-size: 2.25rem;
   }
@@ -104,14 +104,15 @@ export const ImageButton = styled.button`
 export const PageButton = styled.button`
   @media screen and (max-width: 992px) {
     font-size: 2.0rem;
+    padding: 2% 3%;
   }
   @media screen and (min-width: 992px) {
     font-size: 1.5rem;
+    padding: 0.5% 1%;
   }
   border: none;
   background-color: inherit;
   color: black;
-  padding: 2% 3%;
   border-radius: 5px;
   outline: 0;
   margin: 10px 0;

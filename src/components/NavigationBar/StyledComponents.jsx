@@ -45,8 +45,11 @@ export const Button = styled.button`
 `;
 
 export const Brand = styled(Link)`
-  @media only screen and (max-width: 1200px) {
-    font-size: 32px;
+  @media screen and (max-width: 992px) {
+    font-size: 2.5rem ;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 2.0rem ;
   }
   &:hover,
   &:visited,
