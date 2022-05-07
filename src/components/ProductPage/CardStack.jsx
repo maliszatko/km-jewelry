@@ -80,7 +80,7 @@ const CardStack = (props) => {
     setImages(products[items]);
   }
   return (
-    <div style={{ marginTop: "6%" }}>
+    <div style={{ marginTop: "6%", marginBottom: "10%" }}>
       <Title>Kolekcja {props.for.slice(0, -1)+"ów"}</Title>
       <PagesButtons>
         <PageButton active onClick={handleAllFilter}>
@@ -96,7 +96,7 @@ const CardStack = (props) => {
       <Grid style={{ textAlign: "center" }} container>
         {currentImages.map((card, index) => {
           return (
-            <Grid item md={12} lg={6} xl={2} key={index}>
+            <Grid item md={12} lg={6} xl={2} key={index} >
               <Card id={card.id} pre={props.for} name={card.name} src={card.images[0]} key={index} />
             </Grid>
           );

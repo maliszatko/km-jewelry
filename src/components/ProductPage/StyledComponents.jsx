@@ -51,8 +51,15 @@ export const TitleProduct = styled.h1`
 export const CardContainer = styled.div`
   text-align: center;
   align-items: center;
-  width: 50%;
-  height: 400px;
+  
+  @media screen and (max-width: 992px) {
+    height: 80vh;
+    width: 80%;
+  }
+  @media screen and (min-width: 992px) {
+    height: 60vh;
+    width: 60%;
+  }
   margin: 10% auto 0 auto;
   display: block;
   place-items: center;
@@ -84,7 +91,6 @@ export const TextTitle = styled.h2`
 `;
 
 export const PagesButtons = styled.div`
-  margin-top: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,12 +121,11 @@ export const PageButton = styled.button`
   color: black;
   border-radius: 5px;
   outline: 0;
-  margin: 10px 0;
   cursor: pointer;
   box-shadow: 0 2px 2px grey;
   transition: ease background-color 250ms;
   &:hover {
-    background-color: black;
+    background-color: #696969;
     color: white;
   }
   &:disabled {

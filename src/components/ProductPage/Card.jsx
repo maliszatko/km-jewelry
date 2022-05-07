@@ -8,7 +8,7 @@ function Card(props) {
         <img
           src={props.src}
           alt=""
-          style={{ width: "95%", height: "100%", objectFit: "cover" }}
+          style={{ width: "95%", height: "85%", objectFit: "cover" }}
         />
         <TextTitle>{props.name}</TextTitle>
       </CardContainer>
