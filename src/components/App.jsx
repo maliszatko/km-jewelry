@@ -8,6 +8,7 @@ import ProductView from "./ProductPage/ProductView";
 import CardStack from "./ProductPage/CardStack";
 import SignIn from "./CreateProduct/SignIn";
 import { createGlobalStyle } from 'styled-components'
+import { Footer } from './Footer/Footer'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -79,6 +80,7 @@ function App() {
           <Routes>
             <Route exact path="/:product/:id" element={<ProductView />} />
           </Routes>
+          <Footer/>
         </div>
     </Router>
   );
