@@ -25,7 +25,7 @@ export const StyledLink = styled(Link)`
     font-size: 2.0rem;
   }
   @media screen and (min-width: 992px) {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   &:visited,
   &:link,
@@ -65,7 +65,12 @@ export const HeaderBrand = styled(Button)`
 `;
 
 export const HeaderMenu = styled.header`
-  padding: 32px 32px;
+  @media screen and (max-width: 992px) {
+    padding: 32px 32px;
+  }
+  @media screen and (min-width: 992px) {
+    padding: 16px 32px;
+  }
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   display: flex;
   text-align: left;

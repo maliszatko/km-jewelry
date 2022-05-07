@@ -24,7 +24,7 @@ const CardStack = (props) => {
 
     return returnArr;
 }
-  const [imagesPerPage] = useState(12);
+  const [imagesPerPage] = useState(4);
   const [currentPage, setCurrentPage] = useState(1);
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
@@ -55,6 +55,7 @@ const CardStack = (props) => {
   }, [products])
   useEffect(() => {
     setCurrentImages(images.slice(indexOfFirstImage, indexOfLastImage));
+    window.scrollTo(0, 200)
   }, [images, indexOfFirstImage, indexOfLastImage]);
   useEffect(() => {
     if (pages.length !== prevPageNumber) {
