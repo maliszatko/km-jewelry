@@ -25,16 +25,16 @@ export const StyledLink = styled(Link)`
     font-size: 2.0rem;
   }
   @media screen and (min-width: 992px) {
-    font-size: 1.25rem;
-  }
-  &:hover {
-    color: #dddddd;
+    font-size: 1.5rem;
   }
   &:visited,
   &:link,
   &:active {
     color: black;
     text-decoration: none;
+  }
+  &:hover {
+    color: #dddddd;
   }
 `;
 
@@ -99,7 +99,7 @@ export const HeaderImg = styled.img.attrs({
     height: 150px ;
   }
   @media screen and (min-width: 992px) {
-    height: 100px ;
+    height: 8vh ;
   }
 `;
 export const ClosedListItem = styled.li`
