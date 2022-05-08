@@ -3,8 +3,10 @@ import Card from "./Card";
 import { PagesButtons, PageButton, Title } from "./StyledComponents";
 import { Grid } from "@material-ui/core/";
 import { getDatabase, ref as ref_database, child, get } from "firebase/database";
+import {useMediaQuery} from "react-responsive";
 
 const CardStack = (props) => {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 992px)' })
   const items = props.for;
   const [products, setProducts] = useState({
     "kolczyki": [],
@@ -81,7 +83,7 @@ const CardStack = (props) => {
     setImages(products[items]);
   }
   return (
-    <div style={{ marginTop: "6%", marginBottom: "10%" }}>
+    <div style={{ marginTop: "6%", marginBottom: isTabletOrMobile? "15%":"10%" }}>
       <Title>Kolekcja {props.for.slice(0, -1)+"ów"}</Title>
       <PagesButtons>
         <PageButton active onClick={handleAllFilter}>

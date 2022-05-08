@@ -10,7 +10,7 @@ export const WebLink = styled.a`
     text-decoration: none;
   }
   &:hover{
-    color: grey;
+    color: #dddddd;
   }
 `
 

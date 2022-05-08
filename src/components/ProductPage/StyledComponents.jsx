@@ -111,6 +111,7 @@ export const PageButton = styled.button`
   @media screen and (max-width: 992px) {
     font-size: 2.0rem;
     padding: 2% 3%;
+    
   }
   @media screen and (min-width: 992px) {
     font-size: 1.5rem;

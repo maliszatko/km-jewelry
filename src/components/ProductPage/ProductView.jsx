@@ -62,7 +62,6 @@ function ProductView() {
     setDisplayedImage(e.target.src);
   }
   function clickInZoomer() {
-    console.log("clicked");
     setIsZoomed(!isZoomed);
   }
   return (

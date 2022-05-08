@@ -1,6 +1,6 @@
 import React from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
-import { Hero, HeroText, HeroContent, Button } from "./StyledComponents";
+import { Hero, HeroText, HeroContent, Button, StyledLink } from "./StyledComponents";
 
 const Banner = (props) => {
   return (
@@ -21,7 +21,7 @@ const Banner = (props) => {
         }}
       >
         <HeroText>{props.text}</HeroText>
-        <Button>Odkryj</Button>
+        <StyledLink to={props.url}><Button>Odkryj</Button></StyledLink>
       </HeroContent>
     </Hero>
   );

@@ -1,5 +1,23 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
+export const StyledLink = styled(Link)`
+  @media screen and (max-width: 992px) {
+    font-size: 2.0rem;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 1.25rem;
+  }
+  &:visited,
+  &:link,
+  &:active {
+    color: black;
+    text-decoration: none;
+  }
+  &:hover {
+    color: #dddddd;
+  }
+`;
 export const Hero = styled.div`
   position: relative;
 `;
@@ -19,8 +37,12 @@ export const HeroContent = styled.div`
 export const Button = styled.button`
   border: none;
   background-color: white;
-  text-size: 1.25rem;
-  background-color: ;
+  @media screen and (max-width: 992px) {
+    font-size: 1.5rem;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 1.0rem;
+  }
   color: black;
   padding: 5px 15px;
   border-radius: 5px;
@@ -31,7 +53,7 @@ export const Button = styled.button`
   box-shadow: 0px 2px 2px grey;
   transition: ease background-color 250ms;
   &:hover {
-    background-color: black;
+    background-color: #696969;
     color: white;
   }
   &:disabled {
