@@ -1,10 +1,24 @@
 import { React } from "react";
-import { FullPage, Image } from "./StyledComponents";
+import { FullPage, Image, ArrowRight, ArrowLeft } from "./StyledComponents";
 import CloseIcon from "@mui/icons-material/Close";
 import {useMediaQuery} from "react-responsive";
 
 function FullPageView(props) {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 992px)' })
+    const leftArrowStyle = {
+        left: "0",
+        margin: "0 auto",
+        alignItems: "center",
+        width: isTabletOrMobile ? "4rem" : "1.5rem",
+        height: isTabletOrMobile ? "4rem" : "1.5rem",
+    }
+    const rightArrowStyle = {
+        right: "0",
+        margin: "0 auto",
+        alignItems: "center",
+        width: isTabletOrMobile ? "4rem" : "1.5rem",
+        height: isTabletOrMobile ? "4rem" : "1.5rem",
+    }
     function handleClick(e){
         console.log(e)
     }
@@ -31,7 +45,12 @@ function FullPageView(props) {
         }}
         src={props.src}
         onClick={handleClick}
+        onTouchStart={props.handleTouchStart}
+        onTouchMove={props.handleTouchMove}
+        onTouchEnd={props.handleTouchEnd}
       />
+      <ArrowLeft style={leftArrowStyle} onClick={props.clickLeft}/>
+      <ArrowRight style={rightArrowStyle} onClick={props.clickRight}/>
       <CloseIcon
         style={closeIconStyle}
         onClick={props.onClick}
