@@ -101,7 +101,7 @@ export const HeaderImg = styled.img.attrs({
     height: 10vh ;
   }
   @media screen and (min-width: 992px) {
-    height: 8vh ;
+    height: 12vh ;
   }
 `;
 export const ClosedListItem = styled.li`

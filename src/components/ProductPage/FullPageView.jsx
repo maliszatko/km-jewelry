@@ -15,8 +15,8 @@ function FullPageView(props) {
     const closeIconStyle = {
         color: "white",
         zIndex: "101",
-        width: isTabletOrMobile ? "5.0rem" : "2.0rem",
-        height: isTabletOrMobile ? "5.0rem" : "2.0rem",
+        width: isTabletOrMobile ? "4.0rem" : "2.0rem",
+        height: isTabletOrMobile ? "4.0rem" : "2.0rem",
         position: "absolute",
         top: isTabletOrMobile? "-15%" : "0%",
         right: "0",
@@ -28,6 +28,7 @@ function FullPageView(props) {
             zIndex: "100",
             width: "100%", position: "absolute"}}>
             <Swiper
+                initialSlide={props.currentIndex}
                 spaceBetween={30}
                 className="clicked"
                 hashNavigation={{

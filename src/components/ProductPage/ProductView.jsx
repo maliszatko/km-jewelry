@@ -35,10 +35,10 @@ function ProductView() {
   const [item, setItem] = useState([
     { name: "", description: "", type: "", images: [] }
   ]);
-  const [displayedImage, setDisplayedImage] = useState(item[0].images[0]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [displayedImage, setDisplayedImage] = useState(item[0].images[currentIndex]);
   const [isZoomed, setIsZoomed] = useState(false);
   const swiperRef = useRef(null)
-  const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     setDisplayedImage(item[0].images[0]);
   }, [item]);
@@ -115,6 +115,7 @@ function ProductView() {
       </Grid>
       {isZoomed ? (
         <FullPageView
+          currentIndex={currentIndex}
           onClick={clickInZoomer}
           src={displayedImage}
           images={item[0].images}

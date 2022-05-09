@@ -34,7 +34,7 @@ export const Title = styled.h1`
   @media screen and (min-width: 992px) {
     font-size: 2.0rem;
   }
-  font-family: "Unna", serif;
+  font-family: 'Roboto Flex', sans-serif;
   text-align: center;
 `;
 
@@ -58,11 +58,11 @@ export const CardContainer = styled.div`
     height: 50vh;
     width: 80%;
   }
-  @media screen and (min-width: 992px) and (max-width: 1536px) {
+  @media screen and (min-width: 992px) and (max-width: 2036px) {
     height: 60vh;
     width: 60%;
   }
-  @media screen and (min-width: 1536px) {
+  @media screen and (min-width: 2036px) {
     height: 30vh;
     width: 60%;
   }
@@ -98,6 +98,7 @@ export const TextTitle = styled.h2`
 `;
 
 export const PagesButtons = styled.div`
+  margin-top: 3%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +122,7 @@ export const PageButton = styled.button`
     
   }
   @media screen and (min-width: 992px) {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: 0.5% 1%;
   }
   border: none;
@@ -153,13 +154,6 @@ export const StyledLink = styled(Link)`
     color: black;
     text-decoration: none;
   }
-`;
-
-export const LargeImageButton = styled.button`
-  border: none;
-  background-color: inherit;
-  font-size: 1.25rem;
-  cursor: pointer;
 `;
 
 export const ArrowLeft = styled(ArrowBackIosNewIcon)`
