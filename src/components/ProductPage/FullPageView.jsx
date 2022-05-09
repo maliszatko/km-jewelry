@@ -1,27 +1,17 @@
 import { React } from "react";
-import { FullPage, Image, ArrowRight, ArrowLeft } from "./StyledComponents";
+import { FullPage, Image } from "./StyledComponents";
 import CloseIcon from "@mui/icons-material/Close";
 import {useMediaQuery} from "react-responsive";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import './swiper.css'
+
+import { Pagination, Navigation } from "swiper";
 
 function FullPageView(props) {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 992px)' })
-    const leftArrowStyle = {
-        left: "0",
-        margin: "0 auto",
-        alignItems: "center",
-        width: isTabletOrMobile ? "4rem" : "1.5rem",
-        height: isTabletOrMobile ? "4rem" : "1.5rem",
-    }
-    const rightArrowStyle = {
-        right: "0",
-        margin: "0 auto",
-        alignItems: "center",
-        width: isTabletOrMobile ? "4rem" : "1.5rem",
-        height: isTabletOrMobile ? "4rem" : "1.5rem",
-    }
-    function handleClick(e){
-        console.log(e)
-    }
     const closeIconStyle = {
         color: "white",
         zIndex: "101",
@@ -37,20 +27,22 @@ function FullPageView(props) {
             transform: "translate(0, -50%)",
             zIndex: "100",
             width: "100%", position: "absolute"}}>
-      <Image
-        style={{
-            width: "100%",
-            position: "relative",
-            display: "inline-block"
-        }}
-        src={props.src}
-        onClick={handleClick}
-        onTouchStart={props.handleTouchStart}
-        onTouchMove={props.handleTouchMove}
-        onTouchEnd={props.handleTouchEnd}
-      />
-      <ArrowLeft style={leftArrowStyle} onClick={props.clickLeft}/>
-      <ArrowRight style={rightArrowStyle} onClick={props.clickRight}/>
+            <Swiper
+                spaceBetween={30}
+                className="clicked"
+                hashNavigation={{
+                    watchState: true,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                key={1}
+            >
+                {props.images.map((image,index) => {return (<div><SwiperSlide key={index} data-hash={index}><Image style={{width: "100%", position: "relative", display: "inline-block"}} src={image}/></SwiperSlide></div>)})}
+            </Swiper>
+
       <CloseIcon
         style={closeIconStyle}
         onClick={props.onClick}
