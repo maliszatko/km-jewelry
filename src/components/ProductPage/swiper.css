@@ -1,0 +1,17 @@
+.swiper-button-prev {
+    color: black !important;
+}
+
+.swiper-button-next {
+    color: black !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: white !important;
+}
+.swiper-button-prev.clicked {
+    color: white !important;
+}
+
+.swiper-button-next.clicked {
+    color: white !important;
+}
