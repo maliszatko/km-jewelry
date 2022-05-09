@@ -11,12 +11,18 @@ import {
   Image,
   SmallImage,
   ImageButton,
-  LargeImageButton
+  LargeImageButton, ArrowRight, ArrowLeft
 } from "./StyledComponents";
 import { Grid } from "@material-ui/core/";
 import FullPageView from "./FullPageView";
+import {useMediaQuery} from "react-responsive";
 
 function ProductView() {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 992px)' })
+  const arrowStyle = {
+    width: isTabletOrMobile ? "4rem" : "1.5rem",
+    height: isTabletOrMobile ? "4rem" : "1.5rem",
+  }
   function snapshotToArray(snapshot) {
     var returnArr = [];
 
@@ -57,6 +63,8 @@ function ProductView() {
         console.error(error);
       });
   }, []);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   function handleClick(e) {
     setDisplayedImage(e.target.src);
@@ -64,13 +72,48 @@ function ProductView() {
   function clickInZoomer() {
     setIsZoomed(!isZoomed);
   }
+  function leftArrowClick() {
+    const currentIndex = item[0].images.indexOf(displayedImage)
+    if (currentIndex > 0){
+      setDisplayedImage(item[0].images[currentIndex-1])
+    }
+  }
+  function rightArrowClick() {
+    const currentIndex = item[0].images.indexOf(displayedImage)
+    if (currentIndex < item[0].images.length - 1){
+      setDisplayedImage(item[0].images[currentIndex+1])
+    }
+  }
+  function handleTouchStart(e) {
+    setTouchStart(e.targetTouches[0].clientX);
+  }
+
+  function handleTouchMove(e) {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }
+
+  function handleTouchEnd() {
+    if (touchStart - touchEnd > 150) {
+      // do your stuff here for left swipe
+      leftArrowClick();
+    }
+
+    if (touchStart - touchEnd < -150) {
+      // do your stuff here for right swipe
+      rightArrowClick();
+    }
+  }
   return (
     <div>
       <Grid style={{ textAlign: "center", marginTop: "5%" }} container>
         <Grid item md={12} lg={6} style={{ display: "block" }}>
+          <div style={{position: "relative"}}>
           <LargeImageButton onClick={clickInZoomer}>
-            <Image src={displayedImage} />
+            <Image src={displayedImage} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}/>
           </LargeImageButton>
+          <ArrowLeft style={arrowStyle} onClick={leftArrowClick}/>
+          <ArrowRight style={arrowStyle} onClick={rightArrowClick}/>
+          </div>
           {item[0].images.map((image, index) => {
             if (image === displayedImage) {
               return (
@@ -87,7 +130,7 @@ function ProductView() {
               return (
                 <div style={{ display: "inline" }}>
                   <ImageButton onClick={handleClick}>
-                    <SmallImage src={image} />
+                    <SmallImage src={image}/>
                   </ImageButton>
                 </div>
               );
@@ -102,6 +145,11 @@ function ProductView() {
         <FullPageView
           onClick={clickInZoomer}
           src={displayedImage}
+          clickLeft={leftArrowClick}
+          clickRight={rightArrowClick}
+          handleTouchStart={handleTouchStart}
+          handleTouchMove={handleTouchMove}
+          handleTouchEnd={handleTouchEnd}
         />
       ) : null}
     </div>

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export const FullPage = styled.div`
   position: fixed;
@@ -53,13 +55,18 @@ export const CardContainer = styled.div`
   align-items: center;
   
   @media screen and (max-width: 992px) {
-    height: 60vh;
+    height: 50vh;
     width: 80%;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 992px) and (max-width: 1536px) {
     height: 60vh;
     width: 60%;
   }
+  @media screen and (min-width: 1536px) {
+    height: 30vh;
+    width: 60%;
+  }
+  
   margin: 10% auto 0 auto;
   display: block;
   place-items: center;
@@ -154,3 +161,17 @@ export const LargeImageButton = styled.button`
   font-size: 1.25rem;
   cursor: pointer;
 `;
+
+export const ArrowLeft = styled(ArrowBackIosNewIcon)`
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 7%;
+`
+
+export const ArrowRight = styled(ArrowForwardIosIcon)`
+  position: absolute;
+  color: white;
+  top: 50%;
+  right: 7%;
+`

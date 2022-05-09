@@ -13,7 +13,7 @@ export const OpenList = styled.ul`
     text-align: center;
 `
 export const HeaderMobile = styled.header`
-  padding: 16px 32px;
+  padding: 0 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   display: flex;
   text-align: center;
@@ -68,9 +68,6 @@ export const HeaderMenu = styled.header`
   @media screen and (max-width: 992px) {
     padding: 32px 32px;
   }
-  @media screen and (min-width: 992px) {
-    padding: 16px 32px;
-  }
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   display: flex;
   text-align: left;
@@ -101,7 +98,7 @@ export const HeaderImg = styled.img.attrs({
     src: "https://firebasestorage.googleapis.com/v0/b/km-jewelry.appspot.com/o/images%2Flogo.png?alt=media&token=ac871c0d-b131-4327-aa5d-31afdd6255a9"
 })`
   @media screen and (max-width: 992px) {
-    height: 150px ;
+    height: 10vh ;
   }
   @media screen and (min-width: 992px) {
     height: 8vh ;
