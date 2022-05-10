@@ -9,19 +9,16 @@ export const Form = styled.form`
 export const Button = styled.button`
   border: none;
   background-color: inherit;
-  text-size: 1.25rem;
-  background-color: ;
   color: black;
   padding: 5px 15px;
   border-radius: 5px;
   outline: 0;
   text-transform: uppercase;
-  margin: 10px 0px;
   cursor: pointer;
   box-shadow: 0px 2px 2px grey;
   transition: ease background-color 250ms;
   &:hover {
-    background-color: black;
+    background-color: #696969;
     color: white;
   }
   &:disabled {
@@ -29,4 +26,13 @@ export const Button = styled.button`
     opacity: 0.3;
     box-shadow: 0px 1px 1px lightgray;
   }
+  @media screen and (max-width: 992px) {
+    font-size: 2.0rem;
+    margin: 10% 1%;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 1.25rem;
+    margin: 5% 0;
+  }
 `;
+

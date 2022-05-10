@@ -4,15 +4,23 @@ import { Button } from "./StyledComponents";
 import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Grid } from "@material-ui/core/";
+import {useMediaQuery} from "react-responsive";
 
 export function ImageUploader(props) {
   const [images, setImages] = React.useState([]);
   const maxNumber = 69;
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 992px)' })
 
   const onChange = (imageList, addUpdateIndex) => {
     setImages(imageList);
     props.list(imageList);
   };
+
+  const iconStyle = {
+
+      width: isTabletOrMobile ? "50px" : "24px",
+      height: isTabletOrMobile ? "50px" : "24px",
+  }
 
   return (
     <div className="App">
@@ -34,11 +42,11 @@ export function ImageUploader(props) {
         }) => (
           <div className="upload__image-wrapper">
             <Button onClick={onImageUpload} {...dragProps} type="button">
-              <AddIcon />
+              <AddIcon style={iconStyle}/>
             </Button>
             &nbsp;
             <Button onClick={onImageRemoveAll} type="button">
-              <DeleteIcon />
+              <DeleteIcon style={iconStyle}/>
             </Button>
             <Grid style={{ textAlign: "center" }} container>
               {imageList.map((image, index) => (

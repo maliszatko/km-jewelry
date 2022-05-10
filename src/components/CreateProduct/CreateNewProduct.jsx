@@ -11,8 +11,15 @@ import {
   uploadBytes,
   getDownloadURL
 } from "firebase/storage";
+import {useMediaQuery} from "react-responsive";
 
-function CreateNewProduct() {
+function CreateNewProduct(props) {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 992px)' })
+  const textFieldStyle = {
+    marginTop: "5%",
+    textAlign: "left",
+    marginBottom: "2%",
+  }
   const [formValues, setValues] = useState({
     product: "",
     name: "",
@@ -44,6 +51,7 @@ function CreateNewProduct() {
                 description: formValues.description,
                 images: urlArray
               });
+              props.isSubmitted(true)
             }
           },
           (error) => {
@@ -72,7 +80,7 @@ function CreateNewProduct() {
   return (
     <div>
       <Form onSubmit={handleUpload}>
-        <FormControl size="medium" sx={{ m: 1, minWidth: "30%" }}>
+        <FormControl size="medium" sx={{ marginTop: isTabletOrMobile ? "10%" : "0%", minWidth: isTabletOrMobile ? "60%" : "20%" }}>
           <TextField
             required
             name="product"
@@ -80,15 +88,17 @@ function CreateNewProduct() {
             onChange={handleChange}
             select // tell TextField to render select
             label="Produkt"
-            sx={{ marginTop: "5%", textAlign: "left" }}
+            sx={textFieldStyle}
+            InputProps={{style: {fontSize: isTabletOrMobile ? '3rem' : '1.5rem' }}} // font size of input text
+            InputLabelProps={{style: {fontSize: isTabletOrMobile ? '1.5rem' : '1.15rem'}}}
           >
-            <MenuItem key={1} value="kolczyki">
+            <MenuItem key={1} value="kolczyki" sx={{ fontSize: isTabletOrMobile ? '3rem' : '1.5rem' }}>
               Kolczyki
             </MenuItem>
-            <MenuItem key={2} value="naszyjniki">
+            <MenuItem key={2} value="naszyjniki" sx={{ fontSize: isTabletOrMobile ? '3rem' : '1.5rem' }}>
               Naszyjniki
             </MenuItem>
-            <MenuItem key={3} value="pierścionki">
+            <MenuItem key={3} value="pierścionki" sx={{ fontSize: isTabletOrMobile ? '3rem' : '1.5rem' }}>
               Pierścionki
             </MenuItem>
           </TextField>
@@ -98,7 +108,9 @@ function CreateNewProduct() {
             required
             label="Nazwa produktu"
             name="name"
-            sx={{ marginTop: "5%", textAlign: "left" }}
+            sx={textFieldStyle}
+            InputProps={{style: {fontSize: isTabletOrMobile ? '3rem' : '1.5rem' }}} // font size of input text
+            InputLabelProps={{style: {fontSize: isTabletOrMobile ? '1.5rem' : '1.15rem'}}}
           />
           <TextField
             name="type"
@@ -106,15 +118,17 @@ function CreateNewProduct() {
             onChange={handleChange}
             select // tell TextField to render select
             label="Typ"
-            sx={{ marginTop: "5%", textAlign: "left" }}
+            sx={textFieldStyle}
+            InputProps={{style: {fontSize: isTabletOrMobile ? '3rem' : '1.5rem' }}} // font size of input text
+            InputLabelProps={{style: {fontSize: isTabletOrMobile ? '1.5rem' : '1.15rem'}}}
           >
-            <MenuItem key={1} value="gold">
+            <MenuItem key={1} value="gold" sx={{ fontSize: isTabletOrMobile ? '3rem' : '1.5rem' }}>
               Złoto
             </MenuItem>
-            <MenuItem key={2} value="silver">
+            <MenuItem key={2} value="silver" sx={{ fontSize: isTabletOrMobile ? '3rem' : '1.5rem' }}>
               Srebro
             </MenuItem>
-            <MenuItem key={3} value="">
+            <MenuItem key={3} value="" sx={{ fontSize: isTabletOrMobile ? '3rem' : '1.5rem' }}>
               Żadne z powyższych
             </MenuItem>
           </TextField>
@@ -123,7 +137,9 @@ function CreateNewProduct() {
             required
             label="Opis produktu"
             onChange={handleChange}
-            sx={{ marginTop: "5%", textAlign: "left" }}
+            sx={textFieldStyle}
+            InputProps={{style: {fontSize: isTabletOrMobile ? '3rem' : '1.5rem' }}} // font size of input text
+            InputLabelProps={{style: {fontSize: isTabletOrMobile ? '1.5rem' : '1.15rem'}}}
             multiline
           />
           <ImageUploader list={imageList} />
