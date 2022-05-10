@@ -80,7 +80,7 @@ function CreateNewProduct(props) {
   return (
     <div>
       <Form onSubmit={handleUpload}>
-        <FormControl size="medium" sx={{ marginTop: isTabletOrMobile ? "10%" : "0%", minWidth: isTabletOrMobile ? "60%" : "20%" }}>
+        <FormControl size="medium" sx={{ marginTop: isTabletOrMobile ? "10%" : "0%", width: isTabletOrMobile ? "60%" : "30%" }}>
           <TextField
             required
             name="product"
@@ -150,7 +150,7 @@ function CreateNewProduct(props) {
               type="submit"
               style={{
                 justifyContent: "center",
-                margin: "0 auto",
+                margin: "0 auto 5% auto",
                 color: "green"
               }}
             >
@@ -162,7 +162,7 @@ function CreateNewProduct(props) {
               type="submit"
               style={{
                 justifyContent: "center",
-                margin: "0 auto",
+                margin: "0 auto 5% auto",
                 color: "green"
               }}
             >
