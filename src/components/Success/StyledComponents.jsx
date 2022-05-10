@@ -54,7 +54,7 @@ export const Button = styled.button`
   }
   @media screen and (max-width: 992px) {
     margin: 10% 10%;
-    font-size: 4.25rem;
+    font-size: 2.75rem;
   }
   @media screen and (min-width: 992px) {
     margin: 3% 5%;
