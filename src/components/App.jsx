@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import NavBar from "./NavigationBar/NavBar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Hero from "./HomePage/Hero";
 import { ParallaxProvider } from "react-scroll-parallax";
 import CreateNewProduct from "./CreateProduct/CreateNewProduct";
 import ProductView from "./ProductPage/ProductView";
 import CardStack from "./ProductPage/CardStack";
 import SignIn from "./CreateProduct/SignIn";
+import Success from "./Success/Success"
 import { createGlobalStyle } from 'styled-components'
 import { Footer } from './Footer/Footer'
 
@@ -25,8 +26,12 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   const [isSigned, setIsSigned] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   function handleSignIn(val) {
     setIsSigned(val);
+  }
+  function handleSubmit(value){
+    setIsSubmitted(value)
   }
   console.log(isSigned);
   return (
@@ -68,11 +73,18 @@ function App() {
           </Routes>
           <Routes>
             <Route
+                exact
+                path="/success"
+                element={<Success/>}
+            />
+          </Routes>
+          <Routes>
+            <Route
               exact
               path="/kasia"
               element={
-                isSigned ? (
-                  <CreateNewProduct />
+                isSigned ? (isSubmitted? <Navigate to="/success" /> :
+                  <CreateNewProduct isSubmitted={handleSubmit}/>
                 ) : (
                   <SignIn isSigned={handleSignIn} />
                 )
