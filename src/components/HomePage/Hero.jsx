@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "./Banner";
 import {useMediaQuery} from "react-responsive";
+import AboutMe from "./AboutMe"
 
 const Hero = () => {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 992px)' })
@@ -30,6 +31,7 @@ const Hero = () => {
             left="5%"
             url="/pieśrcionki"
         />
+        <AboutMe/>
     </div>
   );
 };

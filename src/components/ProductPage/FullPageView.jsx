@@ -18,7 +18,7 @@ function FullPageView(props) {
         width: isTabletOrMobile ? "4.0rem" : "2.0rem",
         height: isTabletOrMobile ? "4.0rem" : "2.0rem",
         position: "absolute",
-        top: isTabletOrMobile? "-15%" : "0%",
+        top: (isTabletOrMobile? "-15%" : "0%"),
         right: "0",
     }
   return (
@@ -39,9 +39,8 @@ function FullPageView(props) {
                 }}
                 navigation={true}
                 modules={[Pagination, Navigation]}
-                key={1}
             >
-                {props.images.map((image,index) => {return (<div><SwiperSlide key={index} data-hash={index}><Image style={{width: "100%", position: "relative", display: "inline-block"}} src={image}/></SwiperSlide></div>)})}
+                {props.images.map((image,index) => {return (<div><SwiperSlide key={index} data-hash={index}><Image style={{width: "100%", height: "auto", position: "relative", display: "inline-block"}} src={image}/></SwiperSlide></div>)})}
             </Swiper>
 
       <CloseIcon

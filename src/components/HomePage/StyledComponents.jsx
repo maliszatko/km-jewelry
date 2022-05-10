@@ -24,7 +24,7 @@ export const Hero = styled.div`
 
 export const HeroText = styled.h1`
   color: white;
-  text-size: 1.75rem;
+  font-size: 1.75rem;
 `;
 
 export const HeroContent = styled.div`
@@ -62,3 +62,56 @@ export const Button = styled.button`
     box-shadow: 0px 1px 1px lightgray;
   }
 `;
+export const AboutWrapper = styled.div`
+  @media screen and (max-width: 992px) {
+    margin: 5% auto;
+    width: 90%;
+    border-radius: 5px;
+    border: 2px solid #696969;
+    display: flex;
+    height: auto;
+    padding: 3% 2%;
+    align-items: center;
+  }
+  @media screen and (min-width: 992px) {
+    margin: 3% auto;
+    width: 60%;
+    border-radius: 5px;
+    border: 2px solid #696969;
+    display: flex;
+    height: auto;
+    padding: 3% 2%;
+    align-items: center;
+  }
+`
+export const TextField = styled.div`
+  @media screen and (max-width: 992px) {
+    width: 50%;
+    margin: 0 auto; 
+    vertical-align: top; 
+    overflow-wrap: break-word;
+    display: inline;
+    float: right;
+    text-align: center;
+  }
+  @media screen and (min-width: 992px) {
+    width: 50%;
+    margin: 0 auto;
+    vertical-align: top;
+    overflow-wrap: break-word;
+    display: inline;
+    float: right;
+    text-align: center;
+  }
+`
+
+export const Image = styled.img`
+  @media screen and (max-width: 992px) {
+    width: 45%;
+    display: inline;
+  }
+  @media screen and (min-width: 992px) {
+    width: 45%;
+    display: inline;
+  }
+`
