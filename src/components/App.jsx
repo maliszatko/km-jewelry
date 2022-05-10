@@ -75,7 +75,7 @@ function App() {
             <Route
                 exact
                 path="/success"
-                element={<Success/>}
+                element={<Success resubmitForm={handleSubmit}/>}
             />
           </Routes>
           <Routes>
