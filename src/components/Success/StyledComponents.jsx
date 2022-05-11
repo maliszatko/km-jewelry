@@ -46,7 +46,6 @@ export const Button = styled.button`
   cursor: pointer;
   box-shadow: 0px 2px 2px grey;
   transition: ease background-color 250ms;
-  text-decoration: none;
   &:hover {
     background-color: #696969;
     color: white;

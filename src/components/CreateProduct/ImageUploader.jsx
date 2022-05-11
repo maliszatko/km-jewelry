@@ -17,7 +17,6 @@ export function ImageUploader(props) {
   };
 
   const iconStyle = {
-
       width: "30px",
       height: "30px",
   }
