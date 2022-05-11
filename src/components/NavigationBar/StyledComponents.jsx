@@ -14,6 +14,7 @@ export const OpenList = styled.ul`
     text-align: center;
     padding: 0;
     width: 100vw;
+    
 `
 export const HeaderMobile = styled.header`
   padding: 0 10px;
@@ -21,6 +22,7 @@ export const HeaderMobile = styled.header`
   display: flex;
   text-align: center;
   justify-content: center;
+  background-color: #DAB88B;
 `
 
 export const StyledLink = styled(Link)`
@@ -69,6 +71,7 @@ export const HeaderMenu = styled.header`
   display: flex;
   text-align: left;
   justify-content: left;
+  background-color: #DAB88B;
 `;
 
 export const NavMenu = styled.div`
@@ -88,11 +91,11 @@ export const NavOpenMenu = styled.div`
   position: relative;
   text-align: center;
   justify-content: center;
-  background-color: white;
+  background-color: #FDF6EC;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 `;
 export const HeaderImg = styled.img.attrs({
-    src: "https://firebasestorage.googleapis.com/v0/b/km-jewelry.appspot.com/o/images%2Flogo.png?alt=media&token=ac871c0d-b131-4327-aa5d-31afdd6255a9"
+    src: "https://firebasestorage.googleapis.com/v0/b/km-jewelry.appspot.com/o/images%2FLogo-removebg-preview.png?alt=media&token=aa50a8d6-43e5-40f1-a08b-03c3d69962bf"
 })`
   height: 10vh ;
 `;
