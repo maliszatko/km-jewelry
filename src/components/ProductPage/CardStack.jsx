@@ -6,7 +6,7 @@ import { getDatabase, ref as ref_database, child, get } from "firebase/database"
 import {useMediaQuery} from "react-responsive";
 
 const CardStack = (props) => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 992px)' })
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 900px)' })
   const items = props.for;
   const [products, setProducts] = useState({
     "kolczyki": [],
@@ -99,7 +99,8 @@ const CardStack = (props) => {
       <Grid style={{ textAlign: "center" }} container>
         {currentImages.map((card, index) => {
           return (
-            <Grid item md={12} lg={4} xl={3} key={index} >
+              // 900 1200 1536
+            <Grid item xs={12} sm={12} md={6} lg={4} xl={3} key={index} >
               <Card id={card.id} pre={props.for} name={card.name} src={card.images[0]} key={index} />
             </Grid>
           );
