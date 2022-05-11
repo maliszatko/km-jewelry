@@ -28,25 +28,27 @@ export const SmallImage = styled.img`
 `;
 
 export const Title = styled.h1`
-  @media screen and (max-width: 992px) {
-    font-size: 3.5rem;
-  }
-  @media screen and (min-width: 992px) {
-    font-size: 2.0rem;
-  }
+  font-size: 2.5rem;
+  //@media screen and (max-width: 992px) {
+  //  font-size: 3.5rem;
+  //}
+  //@media screen and (min-width: 992px) {
+  //  font-size: 2.0rem;
+  //}
   font-family: 'Roboto Flex', sans-serif;
   text-align: center;
 `;
 
 export const TitleProduct = styled.h1`
-  @media screen and (max-width: 992px) {
-    font-size: 3.75rem;
-    text-align: center;
-  }
-  @media screen and (min-width: 992px) {
-    font-size: 2.5rem;
-    text-align: left;
-  }
+  font-size: 1.75rem;
+  //@media screen and (max-width: 992px) {
+  //  font-size: 3.75rem;
+  //  text-align: center;
+  //}
+  //@media screen and (min-width: 992px) {
+  //  font-size: 2.5rem;
+  //  text-align: left;
+  //}
   font-family: "Unna", serif;
 `;
 
@@ -56,14 +58,14 @@ export const CardContainer = styled.div`
   
   @media screen and (max-width: 992px) {
     height: 50vh;
-    width: 80%;
+    width: 70%;
   }
   @media screen and (min-width: 992px) and (max-width: 2036px) {
     height: 60vh;
-    width: 60%;
+    width: 70%;
   }
   @media screen and (min-width: 2036px) {
-    height: 30vh;
+    height: 40vh;
     width: 60%;
   }
   
@@ -85,16 +87,16 @@ export const CardContainer = styled.div`
 `;
 
 export const TextTitle = styled.h2`
-  font-size: 0.9rem;
+  font-size: 1.75rem;
   margin: 1% auto;
   overflow-wrap: normal;
   text-align: center;
-  @media screen and (max-width: 992px) {
-    font-size: 2.25rem;
-  }
-  @media screen and (min-width: 992px) {
-    font-size: 1.5rem;
-  }
+  //@media screen and (max-width: 992px) {
+  //  font-size: 2.25rem;
+  //}
+  //@media screen and (min-width: 992px) {
+  //  font-size: 1.5rem;
+  //}
 `;
 
 export const PagesButtons = styled.div`
@@ -116,15 +118,17 @@ export const ImageButton = styled.button`
 `;
 
 export const PageButton = styled.button`
-  @media screen and (max-width: 992px) {
-    font-size: 2.0rem;
-    padding: 2% 3%;
-    
-  }
-  @media screen and (min-width: 992px) {
-    font-size: 1.25rem;
-    padding: 0.5% 1%;
-  }
+  padding: 0.5% 1%;
+  font-size: 1.25rem;
+  //@media screen and (max-width: 992px) {
+  //  font-size: 2.0rem;
+  //  padding: 2% 3%;
+  //  
+  //}
+  //@media screen and (min-width: 992px) {
+  //  font-size: 1.25rem;
+  //  padding: 0.5% 1%;
+  //}
   border: none;
   background-color: inherit;
   color: black;

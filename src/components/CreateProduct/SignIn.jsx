@@ -49,8 +49,8 @@ const SignIn = (props) => {
                 value={values.email}
                 label="email"
                 sx={textFieldStyle}
-                InputProps={{style: {fontSize: isTabletOrMobile ? '3rem' : '1.5rem' }}} // font size of input text
-                InputLabelProps={{style: {fontSize: isTabletOrMobile ? '1.5rem' : '1.15rem'}}}
+                InputProps={{style: {fontSize: '1.25rem' }}} // font size of input text
+                InputLabelProps={{style: {fontSize: '1.0rem'}}}
               />
               <TextField
                 type="password"
@@ -60,8 +60,8 @@ const SignIn = (props) => {
                 value={values.password}
                 label="hasło"
                 sx={textFieldStyle}
-                InputProps={{style: {fontSize: isTabletOrMobile ? '3rem' : '1.5rem' }}} // font size of input text
-                InputLabelProps={{style: {fontSize: isTabletOrMobile ? '1.5rem' : '1.15rem'}}}
+                InputProps={{style: {fontSize: '1.25rem' }}} // font size of input text
+                InputLabelProps={{style: {fontSize: '1.0rem'}}}
               />
               <Button type="submit" disabled={isSubmitting}>
                 Zaloguj
