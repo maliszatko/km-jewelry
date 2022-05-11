@@ -17,42 +17,46 @@ export const AboutWrapper = styled.div`
   }
 `
 export const TextField = styled.div`
-  width: 50%;
-  margin: 0 auto; 
-  vertical-align: top; 
-  overflow-wrap: break-word;
-  display: inline;
-  float: right;
-  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  @media screen and (max-width: 900px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 900px) {
+    text-align: left;
+  }
 `
 
 export const Image = styled.img`
-  width: 45%;
-  display: inline;
+  width: 90%;
 `
 export const TextTitle = styled.h1`
-  margin: 0 auto 10% auto; 
-  display: block;
-  text-align: center;
+  margin: 0 auto 5% auto;
   @media screen and (max-width: 900px) {
     font-size: 1.75rem;
+    text-align: center;
   }
   @media screen and (min-width: 900px) and (max-width: 2000px){
     font-size: 2.25rem;
+    text-align: left;
   }
   @media screen and (min-width: 2000px) {
     font-size: 2.5rem;
+    text-align: left;
   }
 `
 export const TextContent = styled.h4`
-    display: inline;
+  margin: 0 auto;
   @media screen and (max-width: 900px) {
     font-size: 1.0rem;
+    margin: 0 auto 50px auto;
   }
   @media screen and (min-width: 900px) and (max-width: 2000px){
     font-size: 1.25rem;
+    margin: 0 auto;
   }
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem;
+    margin: 0 auto;
   }
 `
