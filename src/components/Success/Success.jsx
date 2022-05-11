@@ -1,18 +1,17 @@
 import React from 'react'
-import { Wrapper, SuccessMessage, Buttons, Button } from './StyledComponents'
-import { Link } from "react-router-dom";
+import { Wrapper, SuccessMessage, Buttons, Button, StyledLink } from './StyledComponents'
 
 const Success = (props) => {
     return (
         <Wrapper>
             <SuccessMessage>Dodano nowy produkt!</SuccessMessage>
         <Buttons>
-            <Link to='/kasia' >
+            <StyledLink to='/kasia' >
                 <Button onClick={() => {props.resubmitForm(false)}}>Dodaj kolejny</Button>
-            </Link>
-            <Link to='/' >
+            </StyledLink>
+            <StyledLink to='/' >
                 <Button>Wróć na stronę główną</Button>
-            </Link>
+            </StyledLink>
             </Buttons>
         </Wrapper>
     );

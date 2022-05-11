@@ -1,23 +1,23 @@
 import styled from 'styled-components'
+import { Link } from "react-router-dom";
 
 export const Wrapper = styled.div`
   @media screen and (max-width: 992px) {
     margin: 20% auto;
   }
   @media screen and (min-width: 992px) {
-    margin: 5% auto;
+    margin: 10% auto;
   }
   text-align: center;
 `
 export const SuccessMessage = styled.h1`
   color: #CCA43D;
-  font-size: 2.75rem;
-  //@media screen and (max-width: 992px) {
-  //  font-size: 6.0rem;
-  //}
-  //@media screen and (min-width: 992px) {
-  //  font-size: 2.75rem;
-  //}
+  @media screen and (max-width: 992px) {
+    font-size: 2.25rem;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 2.75rem;
+  }
 `
 
 export const Buttons = styled.div`
@@ -27,13 +27,13 @@ export const Buttons = styled.div`
   }
   @media screen and (min-width: 992px) {
     margin: 0 auto;
-    display: inline;
   }
 `
 
 export const Button = styled.button`
+  display: block;
   font-size: 1.25rem;
-  margin: 3% 5%;
+  margin: 30px auto;
   font-family: "Montserrat",sans-serif;
   width: fit-content;
   border: none;
@@ -56,11 +56,12 @@ export const Button = styled.button`
     box-shadow: 0px 1px 1px lightgray;
   }
   @media screen and (max-width: 992px) {
-    //margin: 10% 10%;
-    //font-size: 2.75rem;
+    font-size: 1.0rem;
   }
   @media screen and (min-width: 992px) {
-    //margin: 3% 5%;
-    //font-size: 1.25rem;
+    font-size: 1.25rem;
   }
+`
+export const StyledLink = styled(Link)`
+  text-decoration: none;
 `

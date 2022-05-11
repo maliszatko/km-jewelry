@@ -4,7 +4,7 @@ export const Form = styled.form`
   margin: 5% auto;
   text-align: center;
   display: block;
-`;
+`
 
 export const Button = styled.button`
   font-size: 1.25rem;
@@ -35,5 +35,5 @@ export const Button = styled.button`
     //font-size: 1.25rem;
     margin: 5% 0;
   }
-`;
+`
 
