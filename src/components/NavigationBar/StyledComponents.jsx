@@ -5,15 +5,17 @@ export const ClosedList = styled.ul`
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  padding: 0 10%;
 `
 export const OpenList = styled.ul`
     position: relative;
     display: block;
-    justify-content: center;
+    justify-content: flex-end;
     text-align: center;
+    padding: 0;
 `
 export const HeaderMobile = styled.header`
-  padding: 0 32px;
+  padding: 0 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   display: flex;
   text-align: center;
@@ -21,13 +23,12 @@ export const HeaderMobile = styled.header`
 `
 
 export const StyledLink = styled(Link)`
-  font-size: 1.25rem;
-  //@media screen and (max-width: 992px) {
-  //  font-size: 2.0rem;
-  //}
-  //@media screen and (min-width: 992px) {
-  //  font-size: 1.25rem;
-  //}
+  @media screen and (max-width: 992px) {
+    font-size: 1.0rem;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 1.25rem;
+  }
   &:visited,
   &:link,
   &:active {
@@ -72,17 +73,17 @@ export const HeaderMenu = styled.header`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 80%;
   white-space: nowrap;
   position: relative;
   top: 0;
-  left: 10%;
+  left: 0;
   justify-content: center;
-  margin: 0 10%;
+  margin-left: 20%;
 `;
 export const NavOpenMenu = styled.div`
   display: inline-block;
-  width: 100vw;
+  width: fit-content;
   position: relative;
   text-align: center;
   justify-content: center;
@@ -102,15 +103,16 @@ export const HeaderImg = styled.img.attrs({
 `;
 export const ClosedListItem = styled.li`
   list-style-type: none;
-  margin: 0 20%;
+  margin: 0 12%;
+  padding: 0 12%;
   display: inline-block;
   line-height: 20px;
 `
 export const OpenListItem = styled.li`
   list-style-type: none;
-  margin: 5% auto;
+  margin: 5% 0;
   display: flex;
   text-align: center;
   justify-content: center;
-  line-height: 50px;
+  line-height: 20px;
 `
