@@ -4,7 +4,8 @@ import { NavMenu, NavOpenMenu, StyledLink, ClosedList, OpenList, OpenListItem, C
 const links = [
   { name: "Kolczyki", route: "/kolczyki" },
   { name: "Naszyjniki", route: "/naszyjniki" },
-  { name: "Pierścionki", route: "/pierscionki" }
+  { name: "Pierścionki", route: "/pierscionki" },
+    { name: "O Mnie", route: "/about" },
 ];
 function Anchor(props) {
   var textDecoration = { textDecoration: "none" };
@@ -36,11 +37,11 @@ function Links(props) {
       <NavOpenMenu>
         <OpenList>
           {links.map((link, index) => {
-            if (link.name === active) {
-              isSelected = true;
-            } else {
+            link.name === active ?
+              isSelected = true
+           :
               isSelected = false;
-            }
+
             return (
               <Anchor
                 selected={isSelected}
@@ -60,11 +61,10 @@ function Links(props) {
       <NavMenu>
         <ClosedList>
           {links.map((link, index) => {
-            if (link.name === active) {
-              isSelected = true;
-            } else {
-              isSelected = false;
-            }
+            link.name === active ?
+              isSelected = true :
+              isSelected = false
+
             return (
               <Anchor
                 selected={isSelected}

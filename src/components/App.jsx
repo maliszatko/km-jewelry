@@ -10,6 +10,7 @@ import SignIn from "./CreateProduct/SignIn";
 import Success from "./Success/Success"
 import { createGlobalStyle } from 'styled-components'
 import { Footer } from './Footer/Footer'
+import AboutMe from "./AboutMe/AboutMe"
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -69,6 +70,13 @@ function App() {
               exact
               path="/pierscionki"
               element={<CardStack for="pierścionki" />}
+            />
+          </Routes>
+          <Routes>
+            <Route
+                exact
+                path="/about"
+                element={<AboutMe/>}
             />
           </Routes>
           <Routes>

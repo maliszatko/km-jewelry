@@ -10,9 +10,9 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <div style={{padding: isTabletOrMobile ? "2% 0" : "1% 0"}}>
-                <WebLink href="https://www.facebook.com/maliszewska.jewelry/"><FacebookIcon sx={{width: "1.15rem", height: "1.15rem"}}/></WebLink>
-                <WebLink href="https://instagram.com/kmjewelry20"><InstagramIcon sx={{width: "1.15rem", height: "1.15rem"}}/></WebLink>
-                <WebLink href="mailto:kasia.mal@wp.pl"><MailOutlineIcon sx={{width: "1.15rem", height: "1.15rem"}}/></WebLink>
+                <WebLink href="https://www.facebook.com/maliszewska.jewelry/">{isTabletOrMobile ? <FacebookIcon sx={{width: "1.15rem", height: "1.15rem"}}/> : <FacebookIcon sx={{width: "1.75rem", height: "1.75rem"}}/>}</WebLink>
+                <WebLink href="https://instagram.com/kmjewelry20">{isTabletOrMobile ? <InstagramIcon sx={{width: "1.15rem", height: "1.15rem"}}/> : <InstagramIcon sx={{width: "1.75rem", height: "1.75rem"}}/>}</WebLink>
+                <WebLink href="mailto:kasia.mal@wp.pl">{isTabletOrMobile ? <MailOutlineIcon sx={{width: "1.15rem", height: "1.15rem"}}/> : <MailOutlineIcon sx={{width: "1.75rem", height: "1.75rem"}}/>}</WebLink>
             </div>
         </StyledFooter>
     );

@@ -62,33 +62,3 @@ export const Button = styled.button`
     box-shadow: 0px 1px 1px lightgray;
   }
 `;
-export const AboutWrapper = styled.div`
-  border-radius: 5px;
-  border: 2px solid #696969;
-  display: flex;
-  height: auto;
-  padding: 3% 2%;
-  align-items: center;
-  @media screen and (max-width: 992px) {
-    margin: 5% auto;
-    width: 90%;
-  }
-  @media screen and (min-width: 992px) {
-    margin: 3% auto;
-    width: 60%;
-  }
-`
-export const TextField = styled.div`
-  width: 50%;
-  margin: 0 auto; 
-  vertical-align: top; 
-  overflow-wrap: break-word;
-  display: inline;
-  float: right;
-  text-align: center;
-`
-
-export const Image = styled.img`
-  width: 45%;
-  display: inline;
-`
