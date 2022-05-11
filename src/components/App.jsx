@@ -38,7 +38,7 @@ function App() {
   console.log(isSigned);
   return (
     <Router>
-        <div>
+        <div style={{paddingBottom: "60px"}}>
           <GlobalStyle />
           <NavBar />
           <Routes>

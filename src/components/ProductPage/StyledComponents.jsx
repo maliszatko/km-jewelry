@@ -99,11 +99,11 @@ export const PagesButtons = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     margin: 5% 0;
   }
-  @media screen and (min-width: 992px) and (max-width: 2036px) {
-    margin: 2% 0;
+  @media screen and (min-width: 900px) and (max-width: 2036px) {
+    margin: 3% 0 50px 0;
   }
   @media screen and (min-width: 2036px) {
     margin: 1% 0;

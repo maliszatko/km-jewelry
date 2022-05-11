@@ -9,7 +9,6 @@ import {useMediaQuery} from "react-responsive";
 export function ImageUploader(props) {
   const [images, setImages] = React.useState([]);
   const maxNumber = 69;
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 992px)' })
 
   const onChange = (imageList, addUpdateIndex) => {
     setImages(imageList);
@@ -53,13 +52,14 @@ export function ImageUploader(props) {
                   <div
                     key={index}
                     className="image-item"
-                    style={{ margin: "3% 5%" }}
+                    style={{ margin: "3% 5%"}}
                   >
                     <img
                       src={image["data_url"]}
                       alt=""
                       width="100"
                       height="100"
+                      style={{border: "solid 1px black"}}
                     />
                     <div className="image-item__btn-wrapper">
                       <Button onClick={() => onImageUpdate(index)}>
