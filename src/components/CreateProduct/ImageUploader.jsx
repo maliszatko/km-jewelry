@@ -17,9 +17,8 @@ export function ImageUploader(props) {
   };
 
   const iconStyle = {
-
-      width: isTabletOrMobile ? "50px" : "24px",
-      height: isTabletOrMobile ? "50px" : "24px",
+      width: "30px",
+      height: "30px",
   }
 
   return (

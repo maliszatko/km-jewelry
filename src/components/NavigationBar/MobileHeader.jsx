@@ -10,7 +10,7 @@ function MobileHeader() {
     <div>
       <HeaderMobile>
           <div style={{margin: "auto auto auto 0", textAlign: "left"}}>
-          <Hamburger size={60} toggled={isOpen} toggle={setOpen} />
+          <Hamburger size={30} toggled={isOpen} toggle={setOpen} />
           </div>
         <HeaderButton/>
       </HeaderMobile>

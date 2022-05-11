@@ -21,12 +21,13 @@ export const HeaderMobile = styled.header`
 `
 
 export const StyledLink = styled(Link)`
-  @media screen and (max-width: 992px) {
-    font-size: 2.0rem;
-  }
-  @media screen and (min-width: 992px) {
-    font-size: 1.25rem;
-  }
+  font-size: 1.25rem;
+  //@media screen and (max-width: 992px) {
+  //  font-size: 2.0rem;
+  //}
+  //@media screen and (min-width: 992px) {
+  //  font-size: 1.25rem;
+  //}
   &:visited,
   &:link,
   &:active {
@@ -45,12 +46,6 @@ export const Button = styled.button`
 `;
 
 export const Brand = styled(Link)`
-  @media screen and (max-width: 992px) {
-    font-size: 2.5rem ;
-  }
-  @media screen and (min-width: 992px) {
-    font-size: 2.0rem ;
-  }
   &:hover,
   &:visited,
   &:link,
@@ -97,12 +92,13 @@ export const NavOpenMenu = styled.div`
 export const HeaderImg = styled.img.attrs({
     src: "https://firebasestorage.googleapis.com/v0/b/km-jewelry.appspot.com/o/images%2Flogo.png?alt=media&token=ac871c0d-b131-4327-aa5d-31afdd6255a9"
 })`
-  @media screen and (max-width: 992px) {
-    height: 10vh ;
-  }
-  @media screen and (min-width: 992px) {
-    height: 12vh ;
-  }
+  height: 10vh ;
+  //@media screen and (max-width: 992px) {
+  //  height: 10vh ;
+  //}
+  //@media screen and (min-width: 992px) {
+  //  height: 10vh ;
+  //}
 `;
 export const ClosedListItem = styled.li`
   list-style-type: none;

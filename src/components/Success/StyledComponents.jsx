@@ -11,12 +11,13 @@ export const Wrapper = styled.div`
 `
 export const SuccessMessage = styled.h1`
   color: #CCA43D;
-  @media screen and (max-width: 992px) {
-    font-size: 6.0rem;
-  }
-  @media screen and (min-width: 992px) {
-    font-size: 3.0rem;
-  }
+  font-size: 2.75rem;
+  //@media screen and (max-width: 992px) {
+  //  font-size: 6.0rem;
+  //}
+  //@media screen and (min-width: 992px) {
+  //  font-size: 2.75rem;
+  //}
 `
 
 export const Buttons = styled.div`
@@ -31,6 +32,8 @@ export const Buttons = styled.div`
 `
 
 export const Button = styled.button`
+  font-size: 1.25rem;
+  margin: 3% 5%;
   font-family: "Montserrat",sans-serif;
   width: fit-content;
   border: none;
@@ -53,11 +56,11 @@ export const Button = styled.button`
     box-shadow: 0px 1px 1px lightgray;
   }
   @media screen and (max-width: 992px) {
-    margin: 10% 10%;
-    font-size: 2.75rem;
+    //margin: 10% 10%;
+    //font-size: 2.75rem;
   }
   @media screen and (min-width: 992px) {
-    margin: 3% 5%;
-    font-size: 1.25rem;
+    //margin: 3% 5%;
+    //font-size: 1.25rem;
   }
 `
