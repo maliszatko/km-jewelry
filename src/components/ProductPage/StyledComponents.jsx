@@ -56,7 +56,7 @@ export const TitleProduct = styled.h1`
 export const CardContainer = styled.div`
   text-align: center;
   align-items: center;
-  
+  background-color: #F3E9DD;
   @media screen and (max-width: 900px) {
     height: 50vh;
     width: 70%;
@@ -67,17 +67,11 @@ export const CardContainer = styled.div`
     width: 70%;
     margin: 5% auto 0 auto;
   }
-  //@media screen and (min-width: 2036px) {
-  //  height: 40vh;
-  //  width: 60%;
-  //  margin: 4% auto 0 auto;
-  //}
   
   display: block;
   place-items: center;
   padding: 1rem;
   position: relative;
-  background: #fff;
   background-clip: padding-box;
   border: solid 2px transparent;
   border-radius: 0.8rem;

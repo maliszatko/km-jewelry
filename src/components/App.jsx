@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 14px;
     min-height: 100%;
     position: absolute;
+    background-color: #FDF6EC;
   }
 `
 
