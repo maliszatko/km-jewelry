@@ -13,6 +13,7 @@ export const OpenList = styled.ul`
     justify-content: flex-end;
     text-align: center;
     padding: 0;
+    width: 100vw;
 `
 export const HeaderMobile = styled.header`
   padding: 0 10px;
@@ -23,10 +24,10 @@ export const HeaderMobile = styled.header`
 `
 
 export const StyledLink = styled(Link)`
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     font-size: 1.0rem;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 900px) {
     font-size: 1.25rem;
   }
   &:visited,
@@ -61,7 +62,7 @@ export const HeaderBrand = styled(Button)`
 `;
 
 export const HeaderMenu = styled.header`
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     padding: 32px 32px;
   }
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -79,7 +80,7 @@ export const NavMenu = styled.div`
   top: 0;
   left: 0;
   justify-content: center;
-  margin-left: 20%;
+  margin-left: 10%;
 `;
 export const NavOpenMenu = styled.div`
   display: inline-block;
@@ -94,17 +95,11 @@ export const HeaderImg = styled.img.attrs({
     src: "https://firebasestorage.googleapis.com/v0/b/km-jewelry.appspot.com/o/images%2Flogo.png?alt=media&token=ac871c0d-b131-4327-aa5d-31afdd6255a9"
 })`
   height: 10vh ;
-  //@media screen and (max-width: 992px) {
-  //  height: 10vh ;
-  //}
-  //@media screen and (min-width: 992px) {
-  //  height: 10vh ;
-  //}
 `;
 export const ClosedListItem = styled.li`
   list-style-type: none;
-  margin: 0 12%;
-  padding: 0 12%;
+  margin: 0 6%;
+  padding: 0 6%;
   display: inline-block;
   line-height: 20px;
 `

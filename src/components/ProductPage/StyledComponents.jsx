@@ -28,27 +28,28 @@ export const SmallImage = styled.img`
 `;
 
 export const Title = styled.h1`
-  font-size: 2.5rem;
-  //@media screen and (max-width: 992px) {
-  //  font-size: 3.5rem;
-  //}
-  //@media screen and (min-width: 992px) {
-  //  font-size: 2.0rem;
-  //}
+  @media screen and (max-width: 992px) {
+    font-size: 1.75rem;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 2.5rem;
+    margin-bottom: 3%;
+  }
   font-family: 'Roboto Flex', sans-serif;
   text-align: center;
 `;
 
 export const TitleProduct = styled.h1`
-  font-size: 1.75rem;
-  //@media screen and (max-width: 992px) {
-  //  font-size: 3.75rem;
-  //  text-align: center;
-  //}
-  //@media screen and (min-width: 992px) {
-  //  font-size: 2.5rem;
-  //  text-align: left;
-  //}
+  @media screen and (max-width: 960px) {
+    font-size: 1.75rem;
+    text-align: center;
+    margin: 5% 0;
+  }
+  @media screen and (min-width: 960px) {
+    font-size: 2.25rem;
+    text-align: left;
+    margin: 0;
+  }
   font-family: "Unna", serif;
 `;
 
@@ -56,20 +57,22 @@ export const CardContainer = styled.div`
   text-align: center;
   align-items: center;
   
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     height: 50vh;
     width: 70%;
+    margin: 7% auto 0 auto;
   }
-  @media screen and (min-width: 992px) and (max-width: 2036px) {
-    height: 60vh;
-    width: 70%;
-  }
-  @media screen and (min-width: 2036px) {
+  @media screen and (min-width: 900px) {
     height: 40vh;
-    width: 60%;
+    width: 70%;
+    margin: 5% auto 0 auto;
   }
+  //@media screen and (min-width: 2036px) {
+  //  height: 40vh;
+  //  width: 60%;
+  //  margin: 4% auto 0 auto;
+  //}
   
-  margin: 10% auto 0 auto;
   display: block;
   place-items: center;
   padding: 1rem;
@@ -87,23 +90,30 @@ export const CardContainer = styled.div`
 `;
 
 export const TextTitle = styled.h2`
-  font-size: 1.75rem;
   margin: 1% auto;
   overflow-wrap: normal;
   text-align: center;
-  //@media screen and (max-width: 992px) {
-  //  font-size: 2.25rem;
-  //}
-  //@media screen and (min-width: 992px) {
-  //  font-size: 1.5rem;
-  //}
+  @media screen and (max-width: 992px) {
+    font-size: 1.25rem;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 1.75rem;
+  }
 `;
 
 export const PagesButtons = styled.div`
-  margin-top: 3%;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 992px) {
+    margin: 5% 0;
+  }
+  @media screen and (min-width: 992px) and (max-width: 2036px) {
+    margin: 2% 0;
+  }
+  @media screen and (min-width: 2036px) {
+    margin: 1% 0;
+  }
 `;
 
 export const ImageButton = styled.button`
@@ -118,17 +128,14 @@ export const ImageButton = styled.button`
 `;
 
 export const PageButton = styled.button`
-  padding: 0.5% 1%;
-  font-size: 1.25rem;
-  //@media screen and (max-width: 992px) {
-  //  font-size: 2.0rem;
-  //  padding: 2% 3%;
-  //  
-  //}
-  //@media screen and (min-width: 992px) {
-  //  font-size: 1.25rem;
-  //  padding: 0.5% 1%;
-  //}
+  @media screen and (max-width: 992px) {
+    font-size: 1.0rem;
+    padding: 1% 2%;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 1.25rem;
+    padding: 0.5% 1%;
+  }
   border: none;
   background-color: inherit;
   color: black;

@@ -69,7 +69,7 @@ function ProductView() {
   return (
     <div>
       <Grid style={{ textAlign: "center", marginTop: "5%" }} container>
-        <Grid item md={12} lg={6} style={{ display: "block" }}>
+        <Grid item xs={12} sm={12} md={6} style={{ display: "block" }}>
         <Swiper
             initialSlide={currentIndex}
             spaceBetween={30}
@@ -84,14 +84,14 @@ function ProductView() {
             onClick={clickInZoomer}
             ref={swiperRef}
         >
-          {item[0].images.map((image,index) => {return (<div><SwiperSlide key={index} data-hash={index}><Image src={image}/></SwiperSlide></div>)})}
+          {item[0].images.map((image,index) => {return (<div key={index}><SwiperSlide key={index} data-hash={index}><Image key={index} src={image}/></SwiperSlide></div>)})}
         </Swiper>
           {item[0].images.map((image, index) => {
             if (image === displayedImage) {
               return (
                 <div style={{ display: "inline" }} key={index}>
-                  <ImageButton onClick={handleClick}>
-                    <SmallImage
+                  <ImageButton onClick={handleClick} key={index}>
+                    <SmallImage key={index}
                       src={image}
                       style={{ boxShadow: "0px 2px 2px grey" }}
                     />
@@ -100,16 +100,16 @@ function ProductView() {
               );
             } else {
               return (
-                <div style={{ display: "inline" }}>
-                  <ImageButton onClick={handleClick}>
-                    <SmallImage src={image}/>
+                <div style={{ display: "inline" }} key={index}>
+                  <ImageButton onClick={handleClick} key={index}>
+                    <SmallImage src={image} key={index}/>
                   </ImageButton>
                 </div>
               );
             }
           })}
         </Grid>
-        <Grid item md={12} lg={6}>
+        <Grid item xs={12} sm={12} md={6} style={{ display: "block" }}>
           <TitleProduct>{item[0].name}</TitleProduct>
         </Grid>
       </Grid>

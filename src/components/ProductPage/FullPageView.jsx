@@ -40,7 +40,7 @@ function FullPageView(props) {
                 navigation={true}
                 modules={[Pagination, Navigation]}
             >
-                {props.images.map((image,index) => {return (<div><SwiperSlide key={index} data-hash={index}><Image style={{width: "100%", height: "auto", position: "relative", display: "inline-block"}} src={image}/></SwiperSlide></div>)})}
+                {props.images.map((image,index) => {return (<div key={index}><SwiperSlide key={index} data-hash={index}><Image key={index} style={{width: "100%", height: "auto", position: "relative", display: "inline-block"}} src={image}/></SwiperSlide></div>)})}
             </Swiper>
 
       <CloseIcon
