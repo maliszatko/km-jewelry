@@ -102,9 +102,11 @@ export const PagesButtons = styled.div`
   }
   @media screen and (min-width: 900px) and (max-width: 2036px) {
     margin-top: 3%;
+    margin-bottom: 3%;
   }
   @media screen and (min-width: 2036px) {
     margin-top: 1%;
+    margin-bottom: 1%;
   }
 `;
 
@@ -128,7 +130,7 @@ export const PageButton = styled.button`
     font-size: 1.25rem;
     padding: 0.5% 1%;
   }
-  font-weight: 200;
+  font-weight: 300;
   border: none;
   background-color: inherit;
   color: black;
