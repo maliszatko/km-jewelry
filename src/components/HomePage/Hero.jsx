@@ -5,7 +5,7 @@ import {useMediaQuery} from "react-responsive";
 const Hero = () => {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 900px)' })
   return (
-    <div style={{marginBottom: isTabletOrMobile ? "15%" : "10%"}}>
+    <div style={{marginBottom: isTabletOrMobile ? "3%" : "5%"}}>
       <Banner
         image="https://firebasestorage.googleapis.com/v0/b/km-jewelry.appspot.com/o/images%2Fnaszyjniki%2Fclover_1.jpg?alt=media&token=df8b68f1-29a6-4a21-b1cf-79a6101ae5ea"
         speed={isTabletOrMobile?"0":"-50"}

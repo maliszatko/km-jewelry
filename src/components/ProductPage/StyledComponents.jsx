@@ -37,15 +37,15 @@ export const Title = styled.h1`
 `;
 
 export const TitleProduct = styled.h1`
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 900px) {
     font-size: 1.75rem;
     text-align: center;
-    margin: 5% 0;
+    margin: 5% 0 50px 0 ;
   }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 900px) {
     font-size: 2.25rem;
     text-align: left;
-    margin: 0;
+    margin-bottom: 50px;
   }
   font-weight: 200;
 `;
@@ -128,9 +128,11 @@ export const PageButton = styled.button`
     font-size: 1.25rem;
     padding: 0.5% 1%;
   }
+  font-weight: 200;
   border: none;
   background-color: inherit;
   color: black;
+  opacity: 0.8;
   border-radius: 5px;
   outline: 0;
   cursor: pointer;
@@ -158,4 +160,18 @@ export const StyledLink = styled(Link)`
     text-decoration: none;
   }
 `;
-
+export const Description = styled.p`
+  @media screen and (max-width: 900px) {
+    font-size: 0.9rem;
+    text-align: left;
+    margin: 5% auto;
+    width: 90%;
+  }
+  @media screen and (min-width: 900px) {
+    font-size: 1.25rem;
+    text-align: left;
+    margin: 0 auto;
+  }
+  font-weight: 100;
+  opacity: 0.8;
+`;
