@@ -10,7 +10,7 @@ import {
   TitleProduct,
   Image,
   SmallImage,
-  ImageButton
+  ImageButton, Description
 } from "./StyledComponents";
 import { Grid } from "@material-ui/core/";
 import FullPageView from "./FullPageView";
@@ -56,10 +56,11 @@ function ProductView() {
       });
   }, []);
   function handleClick(e) {
+    console.log(e.target.src)
+    console.log(item[0].images.indexOf(e.target.src))
     setCurrentIndex(item[0].images.indexOf(e.target.src));
   }
   function clickInZoomer() {
-    window.scrollTo(0,0)
     setIsZoomed(!isZoomed);
   }
   function handleSlideChange(e) {
@@ -109,6 +110,7 @@ function ProductView() {
         </Grid>
         <Grid item xs={12} sm={12} md={6} style={{ display: "block" }}>
           <TitleProduct>{item[0].name}</TitleProduct>
+          {item[0].description.split(",").map((part, index) => {return <><Description key={index}>{part}</Description></>})}
         </Grid>
       </Grid>
       {isZoomed ? (
