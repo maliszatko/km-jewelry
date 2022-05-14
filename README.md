@@ -1,3 +1,5 @@
+***Note:*** only ```/naszyjniki``` is working for now as it has correct image format in the database
+
 # The purpose 
 
 This is a website that I've created to replace the old Wordpress website my mother was using to show her jewellery collection. All the functionalities remained the same, however, I also added some to automate the creation process of new items in the collection as my mother was having troubles adding them on her own.
