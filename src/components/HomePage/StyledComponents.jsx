@@ -18,10 +18,10 @@ export const Hero = styled.div`
 
 export const HeroText = styled.h1`
   color: white;
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     font-size: 1.0rem;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 900px) {
     font-size: 1.75rem;
   }
 `;
@@ -37,17 +37,16 @@ export const Button = styled.button`
   border: none;
   background-color: white;
   
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     font-size: 0.8rem;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 900px) {
     font-size: 1.0rem;
   }
   color: black;
   padding: 5px 15px;
   border-radius: 5px;
   outline: 0;
-  //text-transform: uppercase;
   margin: 10px 0px;
   cursor: pointer;
   box-shadow: 0px 2px 2px grey;

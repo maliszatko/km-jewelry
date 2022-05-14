@@ -1,21 +1,18 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export const FullPage = styled.div`
   position: fixed;
   padding: 0;
   margin: 0;
   z-index: 1;
-
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
   background: black;
   opacity: 1;
+  overflow-y: auto;
 `;
 
 export const Image = styled.img`
@@ -28,14 +25,14 @@ export const SmallImage = styled.img`
 `;
 
 export const Title = styled.h1`
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     font-size: 1.75rem;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 900px) {
     font-size: 2.5rem;
     margin-bottom: 3%;
   }
-  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 200;
   text-align: center;
 `;
 
@@ -50,7 +47,7 @@ export const TitleProduct = styled.h1`
     text-align: left;
     margin: 0;
   }
-  font-family: "Unna", serif;
+  font-weight: 200;
 `;
 
 export const CardContainer = styled.div`
@@ -87,10 +84,11 @@ export const TextTitle = styled.h2`
   margin: 1% auto;
   overflow-wrap: normal;
   text-align: center;
-  @media screen and (max-width: 992px) {
+  font-weight: 200;
+  @media screen and (max-width: 900px) {
     font-size: 1.25rem;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 900px) {
     font-size: 1.75rem;
   }
 `;
@@ -100,13 +98,13 @@ export const PagesButtons = styled.div`
   align-items: center;
   justify-content: center;
   @media screen and (max-width: 900px) {
-    margin: 5% 0;
+    margin-top: 5%;
   }
   @media screen and (min-width: 900px) and (max-width: 2036px) {
-    margin: 3% 0 50px 0;
+    margin-top: 3%;
   }
   @media screen and (min-width: 2036px) {
-    margin: 1% 0;
+    margin-top: 1%;
   }
 `;
 
@@ -122,11 +120,11 @@ export const ImageButton = styled.button`
 `;
 
 export const PageButton = styled.button`
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     font-size: 1.0rem;
     padding: 1% 2%;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 900px) {
     font-size: 1.25rem;
     padding: 0.5% 1%;
   }
@@ -161,16 +159,3 @@ export const StyledLink = styled(Link)`
   }
 `;
 
-export const ArrowLeft = styled(ArrowBackIosNewIcon)`
-  position: absolute;
-  color: white;
-  top: 50%;
-  left: 7%;
-`
-
-export const ArrowRight = styled(ArrowForwardIosIcon)`
-  position: absolute;
-  color: white;
-  top: 50%;
-  right: 7%;
-`

@@ -35,7 +35,6 @@ const CardStack = (props) => {
   const numberofPages = Math.ceil(images.length / imagesPerPage);
   const pages = Array.from({ length: numberofPages }, (v, k) => k + 1);
   const prevPageNumber = useRef(pages.length);
-  console.log(images)
   useEffect(() => {
     const dbRef = ref_database(getDatabase());
   get(child(dbRef, `/${items}`)).then((snapshot) => {
@@ -83,7 +82,7 @@ const CardStack = (props) => {
     setImages(products[items]);
   }
   return (
-    <div style={{ margin: isTabletOrMobile? "6% auto 15% auto":"4% auto 5% auto" }}>
+    <div style={{ marginTop: isTabletOrMobile? "6%":"4%" }}>
       <Title>Kolekcja {props.for.slice(0, -1)+"ów"}</Title>
       <PagesButtons>
         <PageButton active onClick={handleAllFilter}>

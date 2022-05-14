@@ -14,7 +14,7 @@ import {
 import {useMediaQuery} from "react-responsive";
 
 function CreateNewProduct(props) {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 992px)' })
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 900px)' })
   const textFieldStyle = {
     marginTop: "5%",
     textAlign: "left",

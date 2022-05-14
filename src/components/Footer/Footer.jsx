@@ -6,7 +6,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { useMediaQuery } from "react-responsive";
 
 export const Footer = () => {
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 992px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 900px)' })
     return (
         <StyledFooter>
             <div style={{padding: isTabletOrMobile ? "2% 0" : "1% 0"}}>
