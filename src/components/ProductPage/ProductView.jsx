@@ -36,14 +36,10 @@ function ProductView() {
     { name: "", description: "", type: "", images: [] }
   ]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [displayedImage, setDisplayedImage] = useState(item[0].images[currentIndex]);
   const [isZoomed, setIsZoomed] = useState(false);
   const swiperRef = useRef(null)
   useEffect(() => {
-    setDisplayedImage(item[0].images[0]);
-  }, [item]);
-  useEffect(() => {
-    swiperRef.current.swiper.slideTo(currentIndex);
+    swiperRef.current.swiper.slideTo(currentIndex)
   }, [currentIndex])
   useEffect(() => {
     const dbRef = ref_database(getDatabase());
@@ -59,12 +55,15 @@ function ProductView() {
         console.error(error);
       });
   }, []);
-
   function handleClick(e) {
     setCurrentIndex(item[0].images.indexOf(e.target.src));
   }
   function clickInZoomer() {
+    window.scrollTo(0,0)
     setIsZoomed(!isZoomed);
+  }
+  function handleSlideChange(e) {
+    setCurrentIndex(e.activeIndex)
   }
   return (
     <div>
@@ -82,30 +81,29 @@ function ProductView() {
             navigation={true}
             modules={[Pagination, Navigation]}
             onClick={clickInZoomer}
+            onSlideChange={handleSlideChange}
             ref={swiperRef}
         >
           {item[0].images.map((image,index) => {return (<div key={index}><SwiperSlide key={index} data-hash={index}><Image key={index} src={image}/></SwiperSlide></div>)})}
         </Swiper>
           {item[0].images.map((image, index) => {
-            if (image === displayedImage) {
+            if (index === currentIndex) {
               return (
-                <div style={{ display: "inline" }} key={index}>
-                  <ImageButton onClick={handleClick} key={index}>
-                    <SmallImage key={index}
-                      src={image}
-                      style={{ boxShadow: "0px 2px 2px grey" }}
-                    />
-                  </ImageButton>
-                </div>
-              );
-            } else {
+                  <div style={{display: "inline"}} key={index}>
+                    <ImageButton onClick={handleClick} key={index}>
+                      <SmallImage src={image} key={index} style={{ boxShadow: "0px 2px 2px grey" }}/>
+                    </ImageButton>
+                  </div>
+              )
+            }
+            else {
               return (
-                <div style={{ display: "inline" }} key={index}>
-                  <ImageButton onClick={handleClick} key={index}>
-                    <SmallImage src={image} key={index}/>
-                  </ImageButton>
-                </div>
-              );
+                  <div style={{display: "inline"}} key={index}>
+                    <ImageButton onClick={handleClick} key={index}>
+                      <SmallImage src={image} key={index}/>
+                    </ImageButton>
+                  </div>
+              )
             }
           })}
         </Grid>
@@ -116,9 +114,9 @@ function ProductView() {
       {isZoomed ? (
         <FullPageView
           currentIndex={currentIndex}
-          onClick={clickInZoomer}
-          src={displayedImage}
+          onZoomerClick={clickInZoomer}
           images={item[0].images}
+          onChange={handleSlideChange}
         />
       ) : null}
     </div>

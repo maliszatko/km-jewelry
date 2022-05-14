@@ -27,11 +27,11 @@ export const Button = styled.button`
     opacity: 0.3;
     box-shadow: 0px 1px 1px lightgray;
   }
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     //font-size: 2.0rem;
     margin: 10% 1%;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 900px) {
     //font-size: 1.25rem;
     margin: 5% 0;
   }

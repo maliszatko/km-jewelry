@@ -2,30 +2,30 @@ import styled from 'styled-components'
 import { Link } from "react-router-dom";
 
 export const Wrapper = styled.div`
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     margin: 20% auto;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 900px) {
     margin: 10% auto;
   }
   text-align: center;
 `
 export const SuccessMessage = styled.h1`
   color: #CCA43D;
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     font-size: 2.25rem;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 900px) {
     font-size: 2.75rem;
   }
 `
 
 export const Buttons = styled.div`
   align-items: center;
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     margin: 0 auto;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 900px) {
     margin: 0 auto;
   }
 `
@@ -55,10 +55,10 @@ export const Button = styled.button`
     opacity: 0.3;
     box-shadow: 0px 1px 1px lightgray;
   }
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 900px) {
     font-size: 1.0rem;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 900px) {
     font-size: 1.25rem;
   }
 `

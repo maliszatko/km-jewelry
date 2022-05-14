@@ -4,7 +4,6 @@ import { Button } from "./StyledComponents";
 import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Grid } from "@material-ui/core/";
-import {useMediaQuery} from "react-responsive";
 
 export function ImageUploader(props) {
   const [images, setImages] = React.useState([]);

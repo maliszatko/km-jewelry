@@ -3,7 +3,7 @@ import Banner from "./Banner";
 import {useMediaQuery} from "react-responsive";
 
 const Hero = () => {
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 992px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 900px)' })
   return (
     <div style={{marginBottom: isTabletOrMobile ? "15%" : "10%"}}>
       <Banner

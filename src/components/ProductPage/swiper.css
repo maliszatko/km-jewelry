@@ -4,6 +4,7 @@
 
 .swiper-button-next {
     color: black !important;
+    font-size: 30px !important;
 }
 .swiper-pagination-bullet-active {
     background-color: white !important;
@@ -14,6 +15,7 @@
 
 .swiper-button-next.clicked {
     color: white !important;
+    size: 30px;
 }
 .swiper-container {
     width: 100%;
@@ -21,4 +23,9 @@
     max-height: 100vh;
     min-height: 0;
     min-width: 0;
+}
+@media screen and (max-width: 900px) {
+    :root {
+        --swiper-navigation-size: 30px;
+    }
 }
