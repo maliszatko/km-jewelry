@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState } from "react";
 import { Formik } from "formik";
 import { FormControl, TextField } from "@mui/material";
 import { Form, Button } from "./StyledComponents";
@@ -12,6 +12,8 @@ const SignIn = (props) => {
         textAlign: "left",
         marginBottom: "2%",
     }
+    const [error, setError] = useState(null)
+    console.log(error)
   return (
     <div>
       <Formik
@@ -24,7 +26,14 @@ const SignIn = (props) => {
               props.isSigned(true);
             })
             .catch((error) => {
-              console.log(error.code);
+                if(error.code === "auth/user-not-found") {
+                    setError("Błędne dane logowania");
+                }
+                else
+                {
+                    setError("Wystąpił niespodziewany błąd")
+                }
+                setTimeout(() => setError(null), 5000);
             });
           setSubmitting(false);
         }}
@@ -66,6 +75,7 @@ const SignIn = (props) => {
               <Button type="submit" disabled={isSubmitting}>
                 Zaloguj
               </Button>
+                {(error !== null) && <h2 style={{color: "red"}}>{error}</h2>}
             </FormControl>
           </Form>
         )}
