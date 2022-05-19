@@ -8,9 +8,10 @@ function Card(props) {
         <img
           src={props.src}
           alt=""
-          style={{ width: "95%", height: "90%", objectFit: "cover" }}
+          style={{ width: "95%", height: "80%", objectFit: "cover" }}
         />
-        <TextTitle>{props.name}</TextTitle>
+          <div style={{height: "20%", display: "flex"}}><TextTitle>{props.name}</TextTitle></div>
+
       </CardContainer>
     </StyledLink>
   );

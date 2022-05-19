@@ -109,8 +109,8 @@ function CreateNewProduct(props) {
             label="Nazwa produktu"
             name="name"
             sx={textFieldStyle}
-
-            InputProps={{style: {fontSize: '1.25rem' }}} // font size of input text
+            InputProps={{style: {fontSize: '1.25rem'}}} // font size of input text
+            inputProps={{ maxLength: 35 }}
             InputLabelProps={{style: {fontSize: '1.0rem'}}}
 
           />

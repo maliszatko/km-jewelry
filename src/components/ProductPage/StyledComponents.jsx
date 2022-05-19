@@ -81,7 +81,8 @@ export const CardContainer = styled.div`
 `;
 
 export const TextTitle = styled.h2`
-  margin: 1% auto;
+  width: 80%;
+  margin: auto;
   overflow-wrap: normal;
   text-align: center;
   font-weight: 200;
