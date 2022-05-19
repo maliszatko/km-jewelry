@@ -48,7 +48,6 @@ const SignIn = (props) => {
                 {
                     dispatch({error: "Wystąpił niespodziewany błąd", type: "error"});
                 }
-                setTimeout(() => setError(null), 5000);
             });
           setSubmitting(false);
         }}
